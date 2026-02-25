@@ -1,0 +1,28 @@
+'''
+Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
+
+A subsequence of a string is a sequence of characters that can be obtained by deleting some (or none) of the characters 
+from the original string, while maintaining the relative order of the remaining characters. 
+For example, "ace" is a subsequence of "abcde" while "aec" is not.
+'''
+
+class Solution :
+    def isSubsequence(self, s: str, t: str) -> bool :
+        i = j = 0
+        
+        while i < len(s) and j < len(t) :
+            if s[i] == t[j] :
+                i += 1
+            # iteram in continuare in t chiar daca nu gasim in s, pentru a verifica cu urmatoarele
+            j += 1
+            
+        return i == len(s)
+    
+
+if __name__ == '__main__' :
+    solution = Solution()
+    
+    result = solution.isSubsequence('afe', 'abcde')
+    
+    print(result)
+            
