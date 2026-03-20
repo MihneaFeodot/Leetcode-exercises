@@ -18,4 +18,4 @@ class Solution:
     
 sol = Solution()
 
-print(sol.countElements([1, 1, 2]))
+print(sol.countElements([1, 1, 2, 3]))
